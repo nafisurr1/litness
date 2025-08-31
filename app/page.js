@@ -1,8 +1,9 @@
+// app/page.js
 import Link from "next/link";
 
 export default function Dashboard() {
   return (
-    <div style={{ padding: "20px", backgroundColor: "white", color: "#222", minHeight: "100vh" }}>
+    <div>
       <h1>Welcome back to Litness 🚀</h1>
       <p>Your personal hub for fitness, sleep, and tasks.</p>
 
