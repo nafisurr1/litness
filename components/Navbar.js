@@ -9,6 +9,7 @@ export default function Navbar() {
         <Link href="/workouts">Workouts</Link>
         <Link href="/sleep">Sleep</Link>
         <Link href="/todo">To-Do</Link>
+        <Link href="/calendar">Calendar</Link>
       </div>
     </nav>
   );
