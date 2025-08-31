@@ -12,7 +12,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         {/* Header */}
-        <header style={{ borderBottom: "1px solid #ddd", background: "#fff" }}>
+        <header style={{ borderBottom: "3px solid #bbb", background: "#fff" }}>
           <div
             style={{
               maxWidth: "1200px",
@@ -28,12 +28,22 @@ export default function RootLayout({ children }) {
 
             {/* Navigation */}
             <nav style={{ display: "flex", gap: "20px" }}>
-              <Link href="/">Dashboard</Link>
-              <Link href="/workouts">Workouts</Link>
-              <Link href="/sleep">Sleep</Link>
-              <Link href="/to-do">To-Do</Link>
-              <Link href="/calendar">Calendar</Link>
-            </nav>
+            <Link href="/" style={{ color: "#333", textDecoration: "none", fontWeight: "500" }}>
+              Dashboard
+            </Link>
+            <Link href="/workouts" style={{ color: "#333", textDecoration: "none", fontWeight: "500" }}>
+              Workouts
+            </Link>
+            <Link href="/sleep" style={{ color: "#333", textDecoration: "none", fontWeight: "500" }}>
+              Sleep
+            </Link>
+            <Link href="/to-do" style={{ color: "#333", textDecoration: "none", fontWeight: "500" }}>
+              To-Do
+            </Link>
+            <Link href="/calendar" style={{ color: "#333", textDecoration: "none", fontWeight: "500" }}>
+              Calendar
+            </Link>
+          </nav>
           </div>
         </header>
 
