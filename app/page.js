@@ -1,80 +1,36 @@
 // app/page.js
 import Link from "next/link";
 
-export default function Dashboard() {
+export default function Home() {
   return (
-    <div>
-      <h1>Welcome back to Litness 🚀</h1>
-      <p>Your personal hub for fitness, sleep, and tasks.</p>
+    <main className="min-h-screen flex flex-col items-center justify-center text-center px-6">
+      <h1 className="text-5xl font-bold mb-4">Welcome to Litness 🚀</h1>
+      <p className="text-lg text-gray-600 mb-6 max-w-2xl">
+        Your all-in-one hub to track workouts, improve sleep, and stay on top of your tasks.
+        Stay productive, stay healthy, and stay lit. 🔥
+      </p>
 
-      <div
-        style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(2, 1fr)",
-          gap: "20px",
-          marginTop: "20px",
-        }}
+      <Link
+        href="/dashboard"
+        className="bg-black text-white px-6 py-3 rounded-lg shadow-md hover:bg-gray-800 transition"
       >
-        <Link href="/workouts" style={{ textDecoration: "none", color: "inherit" }}>
-          <div
-            style={{
-              background: "#f5f5f5",
-              padding: "20px",
-              borderRadius: "10px",
-              cursor: "pointer",
-              border: "1px solid #ddd",
-            }}
-          >
-            <h2>Workouts</h2>
-            <p>3 workouts planned this week</p>
-          </div>
-        </Link>
+        Get Started Free
+      </Link>
 
-        <Link href="/sleep" style={{ textDecoration: "none", color: "inherit" }}>
-          <div
-            style={{
-              background: "#f5f5f5",
-              padding: "20px",
-              borderRadius: "10px",
-              cursor: "pointer",
-              border: "1px solid #ddd",
-            }}
-          >
-            <h2>Sleep</h2>
-            <p>Avg: 7 hrs/night</p>
-          </div>
-        </Link>
-
-        <Link href="/to-do" style={{ textDecoration: "none", color: "inherit" }}>
-          <div
-            style={{
-              background: "#f5f5f5",
-              padding: "20px",
-              borderRadius: "10px",
-              cursor: "pointer",
-              border: "1px solid #ddd",
-            }}
-          >
-            <h2>To-Do</h2>
-            <p>2 tasks due today</p>
-          </div>
-        </Link>
-
-        <Link href="/calendar" style={{ textDecoration: "none", color: "inherit" }}>
-          <div
-            style={{
-              background: "#f5f5f5",
-              padding: "20px",
-              borderRadius: "10px",
-              cursor: "pointer",
-              border: "1px solid #ddd",
-            }}
-          >
-            <h2>Calendar</h2>
-            <p>View your month</p>
-          </div>
-        </Link>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12 max-w-4xl">
+        <div className="p-6 bg-gray-100 rounded-lg shadow">
+          <h2 className="text-xl font-semibold mb-2">💪 Workouts</h2>
+          <p>Plan and track your workouts easily to reach your goals.</p>
+        </div>
+        <div className="p-6 bg-gray-100 rounded-lg shadow">
+          <h2 className="text-xl font-semibold mb-2">😴 Sleep</h2>
+          <p>Monitor and improve your sleep for better recovery and focus.</p>
+        </div>
+        <div className="p-6 bg-gray-100 rounded-lg shadow">
+          <h2 className="text-xl font-semibold mb-2">✅ To-Do</h2>
+          <p>Stay productive by organizing your daily tasks in one place.</p>
+        </div>
       </div>
-    </div>
+    </main>
   );
 }
